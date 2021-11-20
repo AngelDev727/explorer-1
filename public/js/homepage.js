@@ -107,9 +107,9 @@ export default class extends view {
                 $('#blk-det-ts').text(new Date(blk.data.timestamp).toLocaleString())
             });
             axios.get(config.api + '/supply').then((supplyRes) => {
-                $('#totalSupply').text(thousandSeperator(supplyRes.data.circulating / 100) + ' DTC')
+                $('#totalSupply').text(thousandSeperator(supplyRes.data.circulating / 1000000) + ' TOKM')
             })
-            axios.get(config.api + '/rank/witness').then((witness) => {
+            axios.get(config.api + '/rank/witnesses').then((witness) => {
             $('#totalwitness').text(witness.data.length)    
             })
             $('#lastBlock').text(block._id)
