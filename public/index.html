@@ -47,17 +47,17 @@
                     <a href="#/" class="navbar-brand m-0 h1" onclick="showLoading()">Breeze Block Explorer</a>
                 </div>
 
-                <div class="header-search-part">
-                    <input id="input" class="input-design dblocks-search" onkeypress="searchEnter()" type="search"
-                        placeholder="Block / Account / Tx" aria-label="Search">
-                    <button id="searchIcon" onclick="searchSubmit()">
-                        <img src="./icons//searchicon.svg">
-                    </button>
-                </div> <!-- ./header-search-part -->
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                     aria-controls="navbarNav" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
+                    
+                </button> -->
+                <button class="navbar-toggler-alternative" type="button" data-toggle="collapse"
+                    data-target="#navbarText" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-alternative-icon">
+                        <span></span>
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav main-menu">
@@ -87,12 +87,13 @@
 
         <footer class="footer">
             <div class="footer_left">
-                <p>Breeze Explorer</p>
-                <a href="">By Breeze Blockchain</a>
+                <a href="#" class="ft-logo">Breeze Explorer <span>By Breeze Blockchain</span></a>
             </div>
-            <div class="footer_right">
-                <p><a href="">Discord</a></p>
-                <p><a href="">Github</a></p>
+            <div class="footer_right text-right">
+                <ul class="sc-links">
+                    <li><a href="">Discord</a></li>
+                    <li><a href="">Github</a></li>
+                </ul>
             </div>
         </footer>
 

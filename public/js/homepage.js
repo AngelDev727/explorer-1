@@ -18,6 +18,14 @@ export default class extends view {
         <div class="main-content-outer-box">
             <a href="#" class="site_logo"><img class="img-fluid"
                     src="https://i.postimg.cc/FF83HCvZ/breeze-logo.png"></a>
+
+                    <div class="header-search-part">
+                    <input id="input" class="input-design dblocks-search" onkeypress="searchEnter()" type="search"
+                        placeholder="Block / Account / Tx" aria-label="Search">
+                    <button id="searchIcon" onclick="searchSubmit()">
+                        <img src="./icons//searchicon.svg">
+                    </button>
+                </div> <!-- ./header-search-part -->
             <div class="homepage_top">
                 <div class="homepageTop_comp">
                     <p>Total Supply</p>
