@@ -1,3 +1,3 @@
 window.config = {
-    api: 'https://api.breezescan.io'
+    api: 'https://api.breezechain.org'
 }

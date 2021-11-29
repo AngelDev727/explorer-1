@@ -20,11 +20,14 @@ export default class extends view {
                     src="https://i.postimg.cc/FF83HCvZ/breeze-logo.png"></a>
 
                     <div class="header-search-part">
+                    <h5>Search</h5>
+                    <div class="hd-search-g-wrap">
                     <input id="input" class="input-design dblocks-search" onkeypress="searchEnter()" type="search"
-                        placeholder="Block / Account / Tx" aria-label="Search">
-                    <button id="searchIcon" onclick="searchSubmit()">
-                        <img src="./icons//searchicon.svg">
-                    </button>
+                    placeholder="Block / Account / Tx" aria-label="Search">
+                <button id="searchIcon" onclick="searchSubmit()">
+                    
+                </button>
+                    </div>
                 </div> <!-- ./header-search-part -->
             <div class="homepage_top">
                 <div class="homepageTop_comp">
@@ -71,7 +74,8 @@ export default class extends view {
         //this.updateChainInfo()
         let blkStreamer = new BlockStreamer()
         blkStreamer.streamBlocks((newBlock) => $('#newblockslst').prepend(this.newBlockCardHtml(newBlock)))
-        intervals.push(setInterval(this.updateChainInfo, 10000))
+        intervals.push(setInterval(this.updateChainInfo, 10000));
+        setInterval(() => { if ($('#newblockslst').children().length > 10) { $('#newblockslst').children().last().remove() } }, 2500);
     }
 
     updateChainInfo() {
@@ -91,19 +95,19 @@ export default class extends view {
     }
 
     newBlockCardHtml(block) {
-        let blockCardHtml = '<div class="card dblocks-card" style="flex-direction:initial;width: 80vw">'
-        blockCardHtml += '<a class="p1" href="#/b/' + block._id + '">#' + block._id + '</a>'
+        let blockCardHtml = '<div class="tbl-body-rw">'
+        blockCardHtml += '<div class="tbl-td"><a class="p1" href="#/b/' + block._id + '">#' + block._id + '</a></div>'
         // blockCardHtml += '&nbsp;by&nbsp;'
-        blockCardHtml += '<a class="p2" href="#/@' + block.miner + '">' + block.miner + '</a>'
+        blockCardHtml += '<div class="tbl-td"><a class="p2" href="#/@' + block.miner + '">' + block.miner + '</a></div>'
         // blockCardHtml += '&nbsp;-&nbsp;'
-        blockCardHtml += '<p class="p3">' + block.txs.length + '</p>'
+        blockCardHtml += '<div class="tbl-td"><p class="p3">' + block.txs.length + '</p></div>'
 
         // if (isPuralArr(block.txs))
         //     blockCardHtml += ' tx(s), '
         // else
         //     blockCardHtml += ' tx, dist: '
 
-        blockCardHtml += '<p id="blk-det-ts" class="p4"></p>'
+        blockCardHtml += '<div class="tbl-td"><p id="blk-det-ts" class="p4"></p></div>'
         // blockCardHtml += ' DTC'
 
         if (block.burn) {
