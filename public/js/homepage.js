@@ -18,7 +18,6 @@ export default class extends view {
         <div class="main-content-outer-box">
             <a href="#" class="site_logo"><img class="img-fluid"
                     src="https://i.postimg.cc/FF83HCvZ/breeze-logo.png"></a>
-
                     <div class="header-search-part">
                     <h5>Search</h5>
                     <div class="hd-search-g-wrap">
@@ -53,6 +52,18 @@ export default class extends view {
                 </div>
             </div>
             <div class="tbl-content-rw">
+                <h3 class="tbl-title text-center"><span>Tatest Transaction</span></h3>
+                <div class="tbl-scroll-wrapper">
+                    <div class="tbl-header">
+                        <div class="tbl-th">Block</div>
+                        <div class="tbl-th">Witness</div>
+                        <div class="tbl-th">Transaction</div>
+                        <div class="tbl-th">Time</div>
+                    </div>
+                    <div id="newblockslst" class="tbl-body"></div>
+                </div>
+            </div>
+            <div class="tbl-content-rw">
                 <h3 class="tbl-title text-center"><span>Latest Blocks</span></h3>
                 <div class="tbl-scroll-wrapper">
                     <div class="tbl-header">
@@ -63,7 +74,6 @@ export default class extends view {
                     </div>
                     <div id="newblockslst" class="tbl-body"></div>
                 </div>
-
             </div>
         </div>
         `

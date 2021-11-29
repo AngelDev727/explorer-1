@@ -228,11 +228,11 @@ button:focus {
     font-weight: 600;
     padding: 5px;
   }
-  
-.tbl-td {
-  font-size: 12px;
-  padding: 5px;
-}
+  .tbl-td {
+    font-size: 12px;
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.5);
+  }
 .tbl-td a {
   color: #1FC1C3;
   text-decoration: none;
