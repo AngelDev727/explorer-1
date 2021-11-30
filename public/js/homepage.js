@@ -21,7 +21,7 @@ export default class extends view {
                <div class="homepage_top">
                 <div style="border-left: 5px solid #84a0e2" class="homepageTop_comp">
                   <p>Total Supply</p>
-                  <p id="totalSupply" style="font-size: xx-large"></p>
+                  <p id="totalSupply" style="font-size: large;color:#1FC1C3"></p>
                   <div onclick="window.location.href = '#/richlist'">
                     <p>View rich list</p>
                     <img style="align-self: center;" src="icons/arrowRight.svg">
@@ -59,10 +59,9 @@ export default class extends view {
     }
 
     init() {
-        // Load supply and reward pool, and update every 10 seconds
-        //this.updateChainInfo()
         let blkStreamer = new BlockStreamer()
         blkStreamer.streamBlocks((newBlock) => $('#newblockslst').prepend(this.newBlockCardHtml(newBlock)))
+        setInterval(() => { if($('#newblockslst').children().length > 10) {$('#newblockslst').children().last().remove()}}, 2500)
         intervals.push(setInterval(this.updateChainInfo,10000))
     }
 
@@ -117,5 +116,6 @@ export default class extends view {
             this.count = this.count + 1;
             return blockCardHtml
     }
+
     
 }

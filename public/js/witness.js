@@ -64,3 +64,7 @@ export default class extends view {
         })
     }
 }
+
+
+//setInterval(() => { if($('#newblockslst').children().length > 10) {$('#newblockslst').children().last().remove()}}, 2500)
+        
