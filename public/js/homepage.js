@@ -60,7 +60,7 @@ export default class extends view {
                 </div>
             </div>
             <div class="tbl-content-rw">
-                <h3 class="tbl-title text-center"><span>Latest Transactions</span></h3>
+                <h3 class="tbl-title text-center mt-20"><span>Latest Transactions</span></h3>
                 <div class="tbl-scroll-wrapper">
                     <div class="tbl-header">
                         <div class="tbl-th">Block</div>
