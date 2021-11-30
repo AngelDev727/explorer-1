@@ -44,7 +44,8 @@
         <header class="header-area sticky-top">
             <nav class="navbar navbar-expand-xl">
                 <div class="logo-part">
-                    <a href="#/" class="navbar-brand m-0 h1" onclick="showLoading()"><img src="./icons/single-logo.png"></a>
+                    <a href="#/" class="navbar-brand m-0 h1" onclick="showLoading()"><img
+                            src="./icons/single-logo.png"></a>
                 </div>
                 <button class="navbar-toggler-alternative d-xl-none" type="button" data-toggle="collapse"
                     data-target="#navbarText" aria-controls="navbarNav" aria-expanded="false"
@@ -68,14 +69,14 @@
         </header>
         <main class="position-relative main">
             <div id="overlay" class="position-absolute overlay">
-                <img src="./icons/Winter-unscreen.gif" alt="Loading" />
-                Loading...
+                <div class="spinner"></div>
+                <span class="loading-text">Loading...</span>
             </div>
             <div id="container" class="container"></div>
         </main>
 
         <footer class="footer">
-            <div class="footer-content-wrapper-box">
+            <div class="footer-content-top-box">
                 <div class="top-flex-wrapper d-flex align-items-center justify-content-between">
                     <div class="top-f-left d-flex align-items-center">
                         <p class="copyright-text">© Breeze - 2021</p>
@@ -98,6 +99,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="footer-content-bottom-box">
                 <div class="ft-bottom-g-wrapper">
                     <div class="footer-widget first">
                         <p>Breeze is an open source blockchain with an aim to develop decentralized social media.<br>

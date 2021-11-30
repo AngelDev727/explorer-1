@@ -34,6 +34,43 @@ button:active,
 button:focus {
     outline: none;
 }
+.spinner {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: conic-gradient(rgba(112, 157, 240, 0.25), #709CF0);
+	position: relative;
+	animation: spin 1.4s linear infinite;
+	transform: translateZ(0);
+	margin-right: 10px;
+}
+.spinner::after {
+  background: #191414;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.loading-text {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* header-area css start */
 .header-area {
 	padding: 0 20px;
@@ -360,11 +397,6 @@ button:focus {
   .sc-links li {
     margin-left: 10px;
   }
-  .top-flex-wrapper {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 9px;
-    padding-bottom: 9px;
-  }
   .copyright-text {
     margin: 0;
     font-size: 12px;
@@ -408,11 +440,17 @@ button:focus {
 	width: 30px;
 	display: inline-block;
 }
-.footer-content-wrapper-box {
-  max-width: 1140px;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
+.footer-content-top-box,
+.footer-content-bottom-box {
+	max-width: 100%;
+	padding: 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer-content-top-box {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 9px;
+  padding-bottom: 9px;
 }
 .ft-bottom-g-wrapper {
 	display: grid;
