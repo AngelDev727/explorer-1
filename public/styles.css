@@ -103,7 +103,7 @@ button:focus {
     transition: all 0.4s ease;
     position: relative;
 }
-.main-menu li.active a::after {
+/*.main-menu li.active a::after {
 	content: "";
 	position: absolute;
 	width: 12px;
@@ -113,8 +113,8 @@ button:focus {
 	height: 2px;
 	border-radius: 15px;
 	background-color: #fff;
-}
-.logo-part img{width:36px}
+}*/
+.logo-part img{width:36px}.lt_trx{margin-top:20px}
 .main-menu li:not(:first-child) a {
     margin-left: 30px;
 }
