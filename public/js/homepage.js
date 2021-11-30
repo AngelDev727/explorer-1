@@ -38,17 +38,13 @@ export default class extends view {
                 </div>
                 <div class="homepageTop_comp bdr-rg bdr-lf">
                     <p>Last block</p>
-                    <div class="view-blk">
-                        <p>View all blocks</p>
-                        <img src="icons/arrowRight.svg">
-                    </div>
+                    <p id="lastBlock" style="font-size: large;color:#1FC1C3"></p>
+                    <div class="view-blk"><p>View all blocks</p><img src="icons/arrowRight.svg"></div>
                 </div>
                 <div class="homepageTop_comp">
                     <p>Total witness</p>
-                    <div class="view-blk" onclick="window.location.href = '#/witness'">
-                        <p>View all witness</p>
-                        <img src="icons/arrowRight.svg">
-                    </div>
+                    <p id="totalwitness" style="font-size: large;color:#1FC1C3"></p>
+                    <div class="view-blk" onclick="window.location.href = '#/witness'"><p>View all witness</p><img src="icons/arrowRight.svg"></div>
                 </div>
             </div>
             <div class="tbl-content-rw">
