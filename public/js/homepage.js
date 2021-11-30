@@ -15,20 +15,6 @@ export default class extends view {
 
     getHtml() {
         return `
-<<<<<<< HEAD
-            <div class="row">
-                <div style="margin-bottom:50px"><center><img src="https://i.postimg.cc/FF83HCvZ/breeze-logo.png" width="40%"></center></div>
-
-               <div class="homepage_top">
-                <div style="border-left: 5px solid #84a0e2" class="homepageTop_comp">
-                  <p>Total Supply</p>
-                  <p id="totalSupply" style="font-size: large;color:#1FC1C3"></p>
-                  <div onclick="window.location.href = '#/richlist'">
-                    <p>View rich list</p>
-                    <img style="align-self: center;" src="icons/arrowRight.svg">
-                  </div>
-                </div>
-=======
         <div class="main-content-outer-box">
             <a href="#" class="site_logo"><img class="img-fluid"
                     src="https://i.postimg.cc/FF83HCvZ/breeze-logo.png"></a>
@@ -42,7 +28,6 @@ export default class extends view {
                     </div>
                 </div> <!-- ./header-search-part -->
             <div class="homepage_top">
->>>>>>> 1020ef2d2af178d3d3a8cd78c7b4054e17b41d13
                 <div class="homepageTop_comp">
                     <p>Total Supply</p>
                     <p id="totalSupply" style="font-size:large;color:#1FC1C3"></p>
@@ -98,6 +83,7 @@ export default class extends view {
         intervals.push(setInterval(this.updateChainInfo, 10000));
         setInterval(() => { if ($('#newblockslst').children().length > 10) { $('#newblockslst').children().last().remove() } }, 2500);
     }
+
     updateChainInfo() {
         // axios.get(config.api + '/supply').then((supplyRes) => {
         //     $('#supply-circulating').text(thousandSeperator(supplyRes.data.circulating / 100) + ' DTC')
@@ -149,4 +135,5 @@ export default class extends view {
         this.count = this.count + 1;
         return blockCardHtml
     }
+
 }
