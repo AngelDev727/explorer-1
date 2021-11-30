@@ -8,7 +8,7 @@ DBlocks is a single page application (SPA) where all routing are handled on the 
 
 To run a development server using `http-server`:
 ```
-git clone https://gitlab.com/dlike/explorer
+git clone https://gitlab.com/bestboom/explorer
 cd explorer
 
 node index.js
