@@ -30,6 +30,7 @@ export default class extends view {
             <div class="homepage_top">
                 <div class="homepageTop_comp">
                     <p>Total Supply</p>
+                    <p id="totalSupply" style="font-size: xx-large"></p>
                     <div class="view-blk" onclick="window.location.href = '#/richlist'">
                         <p>View rich list</p>
                         <img src="icons/arrowRight.svg">
@@ -51,7 +52,7 @@ export default class extends view {
                 </div>
             </div>
             <div class="tbl-content-rw">
-                <h3 class="tbl-title text-center"><span>Tatest Transaction</span></h3>
+                <h3 class="tbl-title text-center"><span>Latest Blocks</span></h3>
                 <div class="tbl-scroll-wrapper">
                     <div class="tbl-header">
                         <div class="tbl-th">Block</div>
@@ -63,7 +64,7 @@ export default class extends view {
                 </div>
             </div>
             <div class="tbl-content-rw">
-                <h3 class="tbl-title text-center"><span>Latest Blocks</span></h3>
+                <h3 class="tbl-title text-center"><span>Latest TransactionS</span></h3>
                 <div class="tbl-scroll-wrapper">
                     <div class="tbl-header">
                         <div class="tbl-th">Block</div>
