@@ -30,7 +30,7 @@ export default class extends view {
             <div class="homepage_top">
                 <div class="homepageTop_comp">
                     <p>Total Supply</p>
-                    <p id="totalSupply" style="font-size: xx-large"></p>
+                    <p id="totalSupply" style="font-size:large;color:#1FC1C3"></p>
                     <div class="view-blk" onclick="window.location.href = '#/richlist'">
                         <p>View rich list</p>
                         <img src="icons/arrowRight.svg">
