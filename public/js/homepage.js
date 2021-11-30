@@ -19,7 +19,6 @@ export default class extends view {
             <a href="#" class="site_logo"><img class="img-fluid"
                     src="https://i.postimg.cc/FF83HCvZ/breeze-logo.png"></a>
                     <div class="header-search-part">
-                    <h5>Search</h5>
                     <div class="hd-search-g-wrap">
                     <input id="input" class="input-design dblocks-search" onkeypress="searchEnter()" type="search"
                     placeholder="Block / Account / Tx" aria-label="Search">
