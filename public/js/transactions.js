@@ -22,13 +22,25 @@ const TransactionTypes = {
 
 function txCardsHtml(blocks) {
     let result = ''
-    for (let i = 0; i < blocks.length; i++)
-        for (let j = 0; j < blocks[i].txs.length; j++) {
-            result += '<div class="card dblocks-card"><p class="dblocks-card-content">' + DOMPurify.sanitize(txToHtml(blocks[i].txs[j]))
-            result += ' <a href="#/tx/' + blocks[i].txs[j].hash + '" class="badge badge-pill badge-secondary">'
-            result += blocks[i].txs[j].hash.substr(0,6)
-            result += '</a></p></div>'
+    if (blocks.length === undefined) {
+        result += getOneRowHtml(blocks)
+    } else {
+        for (let i = 0; i < blocks.length; i++) {
+            result += getOneRowHtml(blocks[i]);
         }
+    }
+
+    return result
+}
+
+function getOneRowHtml(one) {
+    let result = ''
+    for (let j = 0; j < one.txs.length; j++) {
+        result += '<div class="card dblocks-card"><p class="dblocks-card-content">' + DOMPurify.sanitize(txToHtml(one.txs[j]))
+        result += ' <a href="#/tx/' + one.txs[j].hash + '" class="badge badge-pill badge-secondary">'
+        result += one.txs[j].hash.substr(0,6)
+        result += '</a></p></div>'
+    }
     return result
 }
 

@@ -68,7 +68,7 @@ export default class extends view {
                         <div class="tbl-th">Transaction</div>
                         <div class="tbl-th">Time</div>
                     </div>
-                    <div id="newblockslst" class="tbl-body"></div>
+                    <div id="largeblockslst" class="tbl-body"></div>
                 </div>
             </div>
         </div>
@@ -79,9 +79,19 @@ export default class extends view {
         // Load supply and reward pool, and update every 10 seconds
         //this.updateChainInfo()
         let blkStreamer = new BlockStreamer()
-        blkStreamer.streamBlocks((newBlock) => $('#newblockslst').prepend(this.newBlockCardHtml(newBlock)))
+        blkStreamer.streamBlocks((newBlock) => {
+            $('#newblockslst').prepend(this.newBlockCardHtml(newBlock));
+            
+            if (newBlock.txs.length> 0) {
+                $('#largeblockslst').prepend(txCardsHtml(newBlock));
+            }
+                
+        })
         intervals.push(setInterval(this.updateChainInfo, 10000));
-        setInterval(() => { if ($('#newblockslst').children().length > 10) { $('#newblockslst').children().last().remove() } }, 2500);
+        setInterval(() => { 
+            if ($('#newblockslst').children().length > 10) { $('#newblockslst').children().last().remove() }
+            // if ($('#largeblockslst').children().length > 10) { $('#largeblockslst').children().last().remove() }
+        }, 2500);
     }
 
     updateChainInfo() {
